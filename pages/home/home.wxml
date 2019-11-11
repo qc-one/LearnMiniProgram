@@ -12,3 +12,4 @@
 <view>当前计数：{{counter}}</view>
 <button size="mini" bindtap="handleBtnClickAdd">+</button>
 <button size="mini" bindtap="handleBtnClickReduce">-</button>
+<button size="mini" bindtap="handleBtnClickReduce">-</button>
