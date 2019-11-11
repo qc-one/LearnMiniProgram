@@ -1,33 +1,11 @@
-// pages/home/home.js
+// pages/profile/profile.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:"qinchuang",
-    age:18,
-    students:[
-      {id:1,name:"tom",age:12},
-      {id:2,name:"mary",age:13},
-      {id:3,name:"nini",age:14},
-      {id:4,name:"lili",age:15}
-    ],
-    counter:0
-  },
-  handleBtnClickReduce(){
-    this.setData({
-      counter: this.data.counter - 1
-    })
-  },
-  handleBtnClickAdd(){
-    //1.错误的做法，界面是不会刷新的
-    // this.data.counter+=1
 
-    //2.this.setData()
-    this.setData({
-      counter:this.data.counter+1
-    })
   },
 
   /**
