@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#ff5777",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "你的小程序",
+  "backgroundColor": "blue",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true
 }
