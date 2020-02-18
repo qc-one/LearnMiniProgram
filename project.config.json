@@ -15,7 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.9.1",
 	"appid": "wxe31ffcdf9bb4ef0b",
-	"projectname": "TwoProject",
+	"projectname": "LearnMiniProgram",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
