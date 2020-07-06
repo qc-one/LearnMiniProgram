@@ -1,0 +1,22 @@
+<view>-----列表渲染-----</view>
+<!-- item、index起名字 -->
+<view wx:for="{{movies}}" wx:for-item="num">{{num}}</view>
+<view>-----template-----</view>
+<!-- <template name="temItem">
+  <button size="mini">{{btn}}</button>
+</template> -->
+<template is="temItem" data="{{btn:msg}}"></template>
+<import src="../../template/template.wxml"/>
+
+
+
+
+
+
+
+
+
+
+
+
+

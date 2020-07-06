@@ -1,0 +1,49 @@
+/* pages/component/component.wxss */
+.hover_class {
+ color: red;
+ background-color: beige;
+}
+.father-box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+.son-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+.hover-father {
+  background-color: palevioletred;
+}
+.hover-son {
+  background-color: yellow;
+}
+input {
+  border: 1px red solid;
+  margin: 10px 20px;
+}
+.container-one {
+  background-color: purple;
+  /* height: 400px; */
+  /* overflow: auto; */
+  white-space: nowrap;
+}
+.item-one {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 10px;
+}
+.container-two {
+  margin-top: 10px;
+  background-color: purple;
+  height: 200px;
+}
+.item-two {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 10px;
+}

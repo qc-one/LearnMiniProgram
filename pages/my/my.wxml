@@ -1,0 +1,44 @@
+<!--pages/my/my.wxml-->
+<text>pages/my/my.wxml\n</text>
+<text class="title">Hello Word</text>
+
+<!-- 1、使用自定义组件 -->
+<!-- <my-cpn title="哈哈哈" content="第一个组件 "></my-cpn> -->
+
+<!-- 2、自定义组件的样式细节 -->
+
+<!-- 3、组件与页面的通信---给组件传递数据/样式 -->
+<!-- <button bindtap="handleChangeCpn">改变组件内容</button>
+<my-cpn title="{{myTitle}}" content="第二个组件 " titleclass="blue"></my-cpn> -->
+
+<!-- 4、组件向外传递事件 - 自定义事件 -->
+<!-- <view>当前计数：{{account}}</view>
+<my-cpn title="{{myTitle}}" content="第二个组件 " titleclass="blue" bind:incrementNum="incrementNum"></my-cpn> -->
+
+<!-- 5、demo -->
+<!-- <my-cpn myBnts="{{btns}}" bind:clickItem="handleItem"></my-cpn> -->
+
+<!-- 6、页面直接调用组件的方法 -->
+<!-- <button bindtap="handleCpn">调用组件事件</button>
+<my-cpn id="event-cpn"></my-cpn> -->
+
+<!-- 7、插槽的使用 -->
+<!-- 7.1 单个插槽的使用 -->
+<!-- <my-cpn>
+  <text>我是插槽</text>
+</my-cpn> -->
+<!-- 7.2 多个插槽的使用 -->
+<!-- 注意事项：
+      1.给每一个插槽起一个名字：name属性  
+      2.必须在Component对象中添加一个选项：options -> multipleSlots: true
+ -->
+<my-cpn>
+  <text slot="slot1">我是插槽</text>
+  <text>我是插槽</text>
+  <text>我是插槽</text>
+</my-cpn>
+
+
+
+
+

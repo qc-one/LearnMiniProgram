@@ -2,13 +2,16 @@
 <text class="title">Hello Word</text>
 <button size="mini">按钮</button>
 <!-- 小程序的数据绑定 {{}} Mustache -->
+<view class="title">数据绑定</view>
 <view>Hello {{name}}</view>
-<view>我的年龄：{{age+2}}</view>
+<view class="{{name}}">我的年龄：{{age+2}}</view>
 
 <!-- 2.列表循环  wx:for -->
-<view wx:for="{{students}}" wx:key="{{item.id}}">{{item.name}}</view>
+<view class="title">列表渲染</view>
+<view wx:for="{{students}}" wx:key="{{item.id}}">{{item.name}}{{item.age}}</view>
 
 <!-- 3.事件监听改变data -->
+<view class="title">事件监听</view>
 <view>当前计数：{{counter}}</view>
 <button size="mini" bindtap="handleBtnClickAdd">+</button>
 <button size="mini" bindtap="handleBtnClickReduce">-</button>

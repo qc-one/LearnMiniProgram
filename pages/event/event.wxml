@@ -1,0 +1,52 @@
+<!--pages/event/event.wxml-->
+
+<button bindtap="handleBack">返回</button>
+
+<navigator open-type="navigateBack">返回</navigator>
+
+<!-- 1、事件处理的回顾 -->
+<button bindtap="handleClick">按钮</button>
+<button bind:tap="handleClick">按钮</button>
+<button catchtap="handleClick">按钮</button>
+
+<!-- 2、常见的一些事件 -->
+<view class="box"
+  bind:touchstart="handleTouchStart"
+  bind:touchmove="handleTouchMove"
+  bind:touchend="handleTouchEnd"
+  bind:tap="handleTap"
+  bind:longpress="handleLongPress"></view>
+
+  <!-- 3、事件对象的分析 -->
+<button bindtap="handleEvent">事件对象</button>
+
+<!-- 4、事件的传递参数 -->
+<view class="contain">
+  <block wx:for="{{titles}}" wx:key="{{index}}">
+    <view class="item" bindtap="handleItem" data-index="{{index}}" data-item="{{item}}">{{item}}</view>
+  </block>
+</view>
+
+<!-- 5、事件捕获和事件冒泡 -->
+<!-- bind：一层层传递 -->
+<!-- catch：阻止事件的进一步传递 -->
+<view class="view1" capture-bind:tap="handleCaptureView1" catchtap="handleBindView1">
+  view1
+  <view class="view2" capture-bind:tap="handleCaptureView2" catchtap="handleBindView2">
+    view2
+    <view class="view3" capture-bind:tap="handleCaptureView3" bindtap="handleBindView3">
+      view3
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+

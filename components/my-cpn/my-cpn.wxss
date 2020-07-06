@@ -1,0 +1,29 @@
+/* components/my-cpn/my-cpn.wxss */
+.title {
+  color: red;
+  font-size: 40rpx;
+}
+.content {
+  color: black;
+  font-size: 30rpx;
+}
+.demo-name {
+  text-align: center;
+}
+.btn_contain {
+  display: flex;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.btn-item {
+  flex: 1;
+  text-align: center;
+}
+/* .active {
+  color: red;
+}
+.active text {
+  padding: 20rpx 20rpx;
+  border-bottom: 6rpx solid red;
+} */
+

@@ -1,0 +1,29 @@
+<!--components/my-cpn/my-cpn.wxml-->
+
+<view class="title titleclass">{{title}}</view>
+<view class="content">{{content}}</view>
+
+<button bindtap="handleIncrement">+</button>
+
+<view class="demo-name">-----demo-----</view>
+<view class="btn_contain">
+  <block wx:for="{{myBnts}}" wx:key="index">
+    <view class="btn-item {{currentIndex === index ? 'active' : ''}}" bindtap="changeTab" data-index="{{index}}" data-item="{{item}}">
+      <text>{{item}}</text>
+    </view>
+  </block>
+</view>
+
+<view>{{account}}</view>
+
+<view>我是组件的头部</view>
+<slot name="slot1"></slot>
+<slot name="slot2"></slot>
+<slot name="slot3"></slot>
+<view>我是组件的尾部</view>
+
+
+
+
+
+

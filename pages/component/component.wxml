@@ -1,0 +1,154 @@
+<!--pages/component/component.wxml-->
+<view>1、Text组件</view>
+<!-- 1、基本使用 -->
+<!-- <text>pages/component/component.wxml\n</text>
+<text class="title">Hello Word\n</text> -->
+
+<!-- 2、selectable：true -->
+<!-- 默认情况下text中的文本长按是不能选中的 -->
+<!-- <text selectable="{{true}}">你好小程序\n</text>
+<text selectable>你好小程序\n</text> -->
+
+<!-- 3、space：决定文本空格的大小 -->
+<!-- <text>你好小程序\n</text> -->
+<!-- nbsp：根据字体设置空格的大小 -->
+<!-- <text space="nbsp">你好 小程序\n</text> -->
+<!-- ensp：中文字符空格一半的大小 -->
+<!-- <text space="ensp">你好 小程序\n</text> -->
+<!-- emsp：一个中文字符空格大小 -->
+<!-- <text space="emsp">你好 小程序\n</text> -->
+
+<!-- 4、decode：是否解码文本 -->
+<!-- <text decode="{{true}}">5 &gt; 3</text>
+<text decode>5 &gt; 3\n</text> -->
+
+<view>2、Button组件</view>
+<!-- 1、button的基本使用 -->
+<!-- <button>按钮</button> -->
+<!-- 2、size：mini -->
+<!-- <button size="mini">按钮</button> -->
+<!-- 3、type：按钮的样式类型 -->
+<!-- <button size="mini" type="primary">primary</button> -->
+<!-- <button size="mini" type="default">default</button> -->
+<!-- <button size="mini" type="warn">warn</button> -->
+<!-- 4、plain：按钮是否镂空，背景色透明 -->
+<!-- <button size="mini" plain>plain</button> -->
+<!-- 5、disabled：是否禁用 -->
+<!-- <button size="mini" disabled="{{disAbled}}">disabled</button> -->
+<!-- 6、loading：名称前是否带loading图标 -->
+<!-- <button size="mini" loading>loading</button> -->
+<!-- 7、hocer-class：指定按钮按下去的样式类。当 hover-class="none" 时，没有点击态效果 -->
+<!-- <button size="mini" hover-class="hover_class">hover_class</button> -->
+<!-- 7、open-type：微信开放能力 -->
+<!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">getUserInfo</button> -->
+
+<view>3、view组件</view>
+<!-- <view>view组件：视图组件（块级元素，独占一行，通常用作视图组件）</view>
+<view class="father-box" hover-class="hover-father" hover-stay-time="3000">
+  123
+  <view class="son-box" hover-class="hover-son" hover-start-time="{{1000}}}" hover-stop-propagation>
+    456
+  </view>
+</view> -->
+
+<view>3、image组件</view>
+<!-- 
+  重点：
+    1.image组件可以写成单标签，也可以写成双标签
+    2.image组件默认有自己的大小：320*240
+    3.image组件是一个行内块级元素（inline-block）
+ -->
+<!-- 1、image的基本使用 -->
+<!-- <image></image> -->
+<!-- 2、src：本地地址/远程地址 -->
+
+<!-- <image src="../../assets/images/111.png"></image>
+<image src="/assets/images/111.png"></image> -->
+<!-- 3、补充：显示相册中的图片 -->
+<!-- <button bindtap="handleChoosePic">选中一张图片</button>
+<image src="{{picPath}}"></image> -->
+<!-- 4、lazy-load：图片懒加载，在即将加入一定范围（上下三屏）时才开始加载
+        biandload：监听图片加载完成
+-->
+<!-- <image 
+  lazy-load
+  wx:for="{{1}}"
+  bindload="imageLoad" 
+  src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1592648566&di=59283535a2bbf9a3a899bfc9b556d6cf&src=http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg">
+</image> -->
+<!-- 5、show-menu-by-longpress：开启长按图片显示识别小程序菜单 -->
+<!-- <image show-menu-by-longpress src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1592648566&di=59283535a2bbf9a3a899bfc9b556d6cf&src=http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg"></image> -->
+<!-- 6、binderror：当图片加载出错时触发 -->
+<!-- <image binderror="handleImageError" src="https://ss0.bdsatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1592648566&di=59283535a2bbf9a3a899bfc9b556d6cf&src=http://a3.att.hudong.com/14/75/0130000064186121366756803687.jpg"></image> -->
+<!-- 7、mode：图片裁剪缩放的模式 -->
+
+<view>4、input组件</view>
+<!-- 1、input的基本使用 -->
+<!-- <input></input> -->
+<!-- 2、value：input中的默认值 -->
+<!-- <input value="hahahha"></input> -->
+<!-- 3、type：决定键盘的类型（英文字母+其它符号/数字/身份证号码） -->
+<!-- <input type="idcard"></input>
+<input type="number"></input>
+<input type="digit"></input> -->
+<!-- 4、password：是否是密码类型 -->
+<!-- <input password="{{true}}"></input> -->
+<!-- 5、placeholder：输入框为空时的占位符 
+      placeholder-style：指定placeholder的样式
+      placeholder-class：指定placeholder的样式类
+-->
+<!-- <input placeholder="输入框为空"></input> -->
+<!-- 6、confirm-type：设置键盘右下角按钮的文字，仅在type=“text”时生效 -->
+<!-- <input type="text" confirm-type="go"></input> -->
+<!-- 7、input绑定事件 -->
+<!-- 键盘输入时触发，处理函数可以直接return一个字符串，将替换输入框的内容 -->
+<!-- <input bindinput="handleInput"></input> -->
+<!-- 输入框聚焦时触发 -->
+<!-- <input bindfocus="handleFocus"></input> -->
+<!-- 输入框失焦 -->
+<!-- <input bindblur="handleBlur"></input> -->
+<!-- 点击完成按钮时触发 -->
+<!-- <input bindconfirm="handleConfirm"></input> -->
+<!-- 键盘高度发生变化时触发 -->
+<!-- <input bindkeyboardheightchange="handleHeightChange"></input> -->
+
+<view>5、scroll-view组件</view>
+<!-- scroll-view的基本使用：实现局部滚动 -->
+<!-- 1、水平滚动：scroll-x -->
+<!-- <scroll-view class="container-one" scroll-x>
+  <view wx:for="{{10}}" class="item-one">{{item}}</view>
+</scroll-view> -->
+<!-- 2、垂直滚动：scroll-y -->
+<!-- <scroll-view class="container-two" scroll-y>
+  <view wx:for="{{10}}" class="item-two">{{item}}</view>
+</scroll-view> -->
+<!-- 3、其它补充 -->
+<!-- <scroll-view bindscroll="handleScroll" bindscrolltoupper="handleScroll" class="container-two" scroll-y>
+  <view wx:for="{{10}}" class="item-two">{{item}}</view>
+</scroll-view> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

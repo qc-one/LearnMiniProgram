@@ -1,0 +1,57 @@
+
+// 在wxs文件中定义的时候不需要加<wxs>标签
+  var name = "qinchuang";
+  var sum = function(a,b) {
+    return a + b
+  }
+  //价格格式化
+  function priceFormat(price) {
+    price = parseFloat(price);
+    return price.toFixed(2)
+  }
+  // 时间格式化
+  function dateFormat(time,format) {
+    if (!format) {
+      format = 'yyyy-MM-dd hh:mm:ss'
+    }
+    time = parseInt(time);
+    var realDate = getDate(time);
+    function timeFormat(num) {
+      return num < 10 ? '0' + num : num;
+    }
+    var date = [
+      ['M+', timeFormat(realDate.getMonth() + 1)],
+      ['d+', timeFormat(realDate.getDate())],
+      ['h+', timeFormat(realDate.getHours())],
+      ['m+', timeFormat(realDate.getMinutes())],
+      ['s+', timeFormat(realDate.getSeconds())],
+      ['q+', Math.floor(realDate.getMonth() + 3) / 3],
+      ['s+', realDate.getMilliseconds()]
+    ]
+    var regYear = getRegExp("(y+)", 'i');
+    console.log(regYear);
+    var regl = regYear.exec(format);
+    console.log(regl);
+    console.log(realDate.getFullYear());
+    console.log(4 - regl[1].length);
+    if (regl) {
+      format = format.replace(regl[1], (realDate.getFullYear() + '').substring(4 - regl[1].length));
+    }
+    console.log(format)
+    for (var i = 0; i < date.length; i++) {
+      var k = date[i][0];
+      var v = date[i][1];
+      var reg2 = getRegExp("(" + k + ")").exec(format);
+      if (reg2) {
+        format = format.replace(reg2[1], reg2[1].length == 1 ? v : ("00" + v).substring(('' + v).length ));
+      }
+    }
+    return format;
+  }
+  // commonjs的模块化导出的写法
+  module.exports = {
+    name: name,
+    sum: sum,
+    priceFormat: priceFormat,
+    dateFormat: dateFormat
+  }

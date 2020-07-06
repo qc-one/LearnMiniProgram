@@ -3,7 +3,7 @@
   "navigationBarBackgroundColor": "#ff5777",
   "navigationBarTextStyle": "white",
   "navigationBarTitleText": "你的小程序",
-  "backgroundColor": "blue",
+  "backgroundColor": "#ccc",
   "backgroundTextStyle": "dark",
   "enablePullDownRefresh": true
 }

@@ -4,16 +4,28 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"coverView": true
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.1",
+	"libVersion": "2.11.1",
 	"appid": "wxe31ffcdf9bb4ef0b",
 	"projectname": "LearnMiniProgram",
 	"debugOptions": {
@@ -47,9 +59,38 @@
 			"current": -1,
 			"list": [
 				{
+					"id": 0,
+					"name": "wxss",
+					"pathName": "pages/wxss/wxss",
+					"query": "",
+					"scene": null
+				},
+				{
 					"id": -1,
-					"name": "pages/profile/profile",
-					"pathName": "pages/profile/profile",
+					"name": "pages/about/about",
+					"pathName": "pages/about/about",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "组件",
+					"pathName": "pages/component/component",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/api/api",
+					"pathName": "pages/api/api",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/home",
+					"query": "",
 					"scene": null
 				}
 			]

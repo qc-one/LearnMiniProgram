@@ -1,21 +1,35 @@
 {
-  "pages": "全局的一些配置，比如window/tabbar等",
   "pages": [
+    "pages/api/api",
+    "pages/my/my",
+    "pages/event/event",
+    "pages/wxs/wxs",
+    "pages/wxml/wxml",
     "pages/home/home",
     "pages/about/about",
-    "pages/profile/profile"
+    "pages/wxss/wxss",
+    "pages/component/component"
   ],
+  "usingComponents": {
+    "my-cpn": "/components/my-cpn/my-cpn"
+  },
   "window": {
     "navigationBarBackgroundColor": "#ff5777",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "我的小程序",
-    "backgroundColor": "blue",
+    "navigationBarTitleText": "我的小程序11",
+    "backgroundColor": "#ff5777",
     "backgroundTextStyle": "dark",
     "enablePullDownRefresh": true
   },
   "tabBar": {
-    "selectedColor":"#ff5777",
+    "selectedColor": "#ff5777",
     "list": [
+      {
+        "pagePath": "pages/component/component",
+        "text": "component",
+        "iconPath": "./assets/tabbar/home.png",
+        "selectedIconPath": "./assets/tabbar/home_active.png"
+      },
       {
         "pagePath": "pages/home/home",
         "text": "home",
@@ -23,14 +37,20 @@
         "selectedIconPath": "./assets/tabbar/home_active.png"
       },
       {
-        "pagePath": "pages/profile/profile",
-        "text": "profile",
+        "pagePath": "pages/wxss/wxss",
+        "text": "wxss",
         "iconPath": "./assets/tabbar/profile.png",
         "selectedIconPath": "./assets/tabbar/profile_active.png"
       },
       {
         "pagePath": "pages/about/about",
         "text": "about",
+        "iconPath": "./assets/tabbar/profile.png",
+        "selectedIconPath": "./assets/tabbar/profile_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "my",
         "iconPath": "./assets/tabbar/profile.png",
         "selectedIconPath": "./assets/tabbar/profile_active.png"
       }

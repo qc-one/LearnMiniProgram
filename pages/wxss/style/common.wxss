@@ -1,0 +1,10 @@
+.box-px {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.box-rpx {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: red;
+}

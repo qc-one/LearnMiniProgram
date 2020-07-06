@@ -1,0 +1,31 @@
+<!--pages/request/request.wxml-->
+
+<!-- 1、Toast -->
+<button size="mini" bindtap="showToast">Toast</button>
+
+<!-- 2、Modal -->
+<button size="mini" bindtap="showModal">Modal</button>
+
+<!-- 3、Loading -->
+<button size="mini" bindtap="showLoading">Loading</button>
+
+<!-- 4、actionSheet -->
+<button size="mini" bindtap="showActionSheet">actionSheet</button>
+
+<!-- 5、分享按钮 -->
+<button size="mini" open-type="share">分享</button>
+
+<!-- 6、页面跳转 -->
+<!-- 6.1 通过navigator进行跳转 -->
+<navigator url="/pages/wxs/wxs" open-type="navigate">跳转</navigator>
+<!-- 6.2 跳转过程中数据的传递 -->
+<navigator url="/pages/event/event?name=qin&age=18">页面跳转数据传递</navigator>
+<view>{{title}}</view>
+<!-- 6.3通过js代码进行页面跳转 -->
+<button size="mini" bind:tap="handleJump">js代码进行页面跳转</button>
+
+
+
+
+
+
